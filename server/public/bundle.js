@@ -106,6 +106,32 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+var _Header = __webpack_require__(/*! ./Header */ "./client/components/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Mission = __webpack_require__(/*! ./Mission */ "./client/components/Mission.jsx");
+
+var _Mission2 = _interopRequireDefault(_Mission);
+
+var _Login = __webpack_require__(/*! ./Login */ "./client/components/Login.jsx");
+
+var _Login2 = _interopRequireDefault(_Login);
+
+var _Submit = __webpack_require__(/*! ./Submit */ "./client/components/Submit.jsx");
+
+var _Submit2 = _interopRequireDefault(_Submit);
+
+var _Employer = __webpack_require__(/*! ./Employer */ "./client/components/Employer.jsx");
+
+var _Employer2 = _interopRequireDefault(_Employer);
+
+var _Jobseeker = __webpack_require__(/*! ./Jobseeker */ "./client/components/Jobseeker.jsx");
+
+var _Jobseeker2 = _interopRequireDefault(_Jobseeker);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -117,19 +143,43 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
 
-  function App() {
+  function App(props) {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    _this.state = {};
+    return _this;
   }
 
   _createClass(App, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        _reactRouterDom.HashRouter,
         null,
-        'hi hi'
+        _react2.default.createElement(
+          'div',
+          { className: 'App' },
+          _react2.default.createElement(
+            'div',
+            { className: 'front' },
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Header2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Mission2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Login2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Submit2.default })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'employerPage' },
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/employer', component: _Employer2.default })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'jobseeker' },
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/jobseeker', component: _Jobseeker2.default })
+          )
+        )
       );
     }
   }]);
@@ -138,6 +188,126 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = App;
+
+/***/ }),
+
+/***/ "./client/components/Employer.jsx":
+/*!****************************************!*\
+  !*** ./client/components/Employer.jsx ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ "./client/components/Header.jsx":
+/*!**************************************!*\
+  !*** ./client/components/Header.jsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'header' },
+    _react2.default.createElement(
+      'h1',
+      null,
+      ' Nice Work '
+    )
+  );
+};
+
+exports.default = Header;
+
+/***/ }),
+
+/***/ "./client/components/Jobseeker.jsx":
+/*!*****************************************!*\
+  !*** ./client/components/Jobseeker.jsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ "./client/components/Login.jsx":
+/*!*************************************!*\
+  !*** ./client/components/Login.jsx ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ "./client/components/Mission.jsx":
+/*!***************************************!*\
+  !*** ./client/components/Mission.jsx ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Mission = function Mission() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'mission' },
+    _react2.default.createElement(
+      'p',
+      null,
+      ' We are help people looking for work connect with employers looking for people '
+    )
+  );
+};
+
+exports.default = Mission;
+
+/***/ }),
+
+/***/ "./client/components/Submit.jsx":
+/*!**************************************!*\
+  !*** ./client/components/Submit.jsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 /***/ }),
 

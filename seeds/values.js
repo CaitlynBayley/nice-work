@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('values').insert([
-        { id: 1, 
+        {id: 1, 
           username: 'bobjones', 
           value1: 'challenge', 
           value2: 'honesty', 
@@ -27,7 +27,7 @@ exports.seed = function(knex, Promise) {
           value2: 'positivity', 
           value3: 'diversity', 
           value4: 'teamwork', 
-          value5:'acceptance'
+          value5: 'acceptance'
         }
       ])
     })

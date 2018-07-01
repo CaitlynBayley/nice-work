@@ -1,8 +1,8 @@
 {
-  "name": "fullstack-boiler",
+  "name": "nice-work",
   "version": "1.0.0",
-  "description": "A site about food",
-  "repository": "https://github.com/anthony-xiao/fullstack-boiler.git",
+  "description": "A site to connect employers with jobseekers",
+  "repository": "https://github.com/caitlynbayley/nice-work.git",
   "main": "server/index.js",
   "scripts": {
     "dev": "nodemon server & webpack --watch",
@@ -15,7 +15,7 @@
       "react"
     ]
   },
-  "author": "anthony-xiao <juniorxiao01@gmail.com>",
+  "author": "Caitlyn Bayley caitlyn.bayley@gmail.com",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.3",
