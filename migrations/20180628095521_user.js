@@ -1,5 +1,5 @@
 exports.up = (knex, Promise) => {
-  return knex.schema.createTable('employer', table => {
+  return knex.schema.createTable('user', table => {
     table.increments('id').primary()
     table.string('username')
     table.string('firstName')
@@ -9,14 +9,19 @@ exports.up = (knex, Promise) => {
     table.string('contactPerson')
     table.string('preferredPronouns')
     table.string('email')
+    table.string('introduction')    
+    table.string('value1')
+    table.string('value2')
+    table.string('value3')
+    table.string('value4')
+    table.string('value5')
     table.string('jobTitle')
-    table.string('jobDescription')
-    table.string('jobValuesApplied')
-    table.string('jobHours')
-    table.string('jobSalary')
+    table.string('valuesApplied')
+    table.string('hours')
+    table.string('rate')
   })
 }
 
 exports.down = (knex, Promise) => {
-  return knex.schema.dropTable('employer')
+  return knex.schema.dropTable('user')
 }

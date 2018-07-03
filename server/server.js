@@ -1,11 +1,16 @@
 const express = require('express')
-const server = express()
-const sushi = require('./routes/sushi')
 const path = require('path')
+const login = require('./routes/login')
+// const employer = require('./routes/employer')
+// const jobseeker = require('./routes/jobseeker')
+
+const server = express()
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 
-server.use('/api/v1/sushi', sushi)
+server.use('/v1/login', login)
+// server.use('/api/v1/', employer)
+// server.use('/api/v1/', jobseeker)
 
 module.exports = server

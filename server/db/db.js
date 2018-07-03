@@ -3,37 +3,41 @@ const config = require(path.join(__dirname, '../../knexfile')).development
 const knex = require('knex')(config)
 
 module.exports = {
-  allSushi,
-  getSushi,
-  newSushi,
-  editSushi,
-  deleteSushi
+  // getValues,
+  getValue,
+  // addValue,
+  // editValue,
+  // deleteValue
 }
 
-function allSushi () {
-  const db = knex
-  return db('sushi').select()
+function getValue (id, testDb) {
+  const db = testDb || knex
+  return db('values')
+    .where('id', id)
+    .select()
+    .first()
 }
 
-function getSushi (id) {
-  const db = knex
-  return db('sushi')
-    .where('id', id).select()
-}
+// function getValues (testDb) {
+//   const db = testDb || knex
+//   return db('values')
+//     .insert({value: value})
+// }
 
-function newSushi (sushi) {
-  const db = knex
-  return db('sushi').insert(sushi)
-}
+// function addValue (name, testDb) {
+//   const db = testDb || knex
+//   return db('values')
+//     .insert({values: values})
+// }
 
-function editSushi (sushi) {
-  const db = knex
-  return db('sushi')
-    .where('id', sushi.id).update(sushi)
-}
+// function editSushi (sushi) {
+//   const db = knex
+//   return db('sushi')
+//     .where('id', sushi.id).update(sushi)
+// }
 
-function deleteSushi (id) {
-  const db = knex
-  return db('sushi')
-    .where('id', id).del()
-}
+// function deleteSushi (id) {
+//   const db = knex
+//   return db('sushi')
+//     .where('id', id).del()
+// }
