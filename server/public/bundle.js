@@ -171,13 +171,8 @@ var App = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'employerPage' },
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/employer', component: _Employer2.default })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'jobseeker' },
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/jobseeker', component: _Jobseeker2.default })
+            { className: 'user' },
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/user', component: _Employer2.default })
           )
         )
       );

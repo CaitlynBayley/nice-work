@@ -27,11 +27,8 @@ class App extends React.Component {
             <Route path ='/login' component={Login} />
             <Route path ='/login' component={Submit} />
           </div>
-          <div className = 'employerPage'>
-            <Route path ='/employer' component={Employer}/>
-          </div>
-          <div className = 'jobseeker'>
-            <Route path = '/jobseeker' component={Jobseeker}/>
+          <div className = 'user'>
+            <Route path ='/user' component={Employer}/>
           </div>
         </div>
       </Router>
